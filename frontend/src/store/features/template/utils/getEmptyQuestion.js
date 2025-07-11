@@ -1,4 +1,5 @@
-import { DifficultyLevelTypes ,QuestionTypes } from "../../../../types/DifficultyLevelTypes";
+import { QuestionTypes,DifficultyLevelTypes } from "../../../../types";
+
 
 export const getEmptyQuestion = ({ type = QuestionTypes.MULTIPLE_CHOICE }) => {
   return {

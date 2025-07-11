@@ -1,8 +1,11 @@
 import React from "react";
-import { InputTypes } from "../../../common/inputs/CustomInput/types";
-import CustomInput from "../../../common/inputs/CustomInput";
+import { InputTypes } from "../../../../common/inputs/CustomInput/types";
+import CustomInput from "../../../../common/inputs/CustomInput";
 import { useSelector } from "react-redux";
-import { setTemplateKey,templateSelector } from "../../../../store/features/template/templateSlice";
+import {
+  setTemplateKey,
+  templateSelector,
+} from "../../../../../store/features/template/templateSlice";
 import { useDispatch } from "react-redux";
 
 function TemplatesBasicDetailsForm() {
