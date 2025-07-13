@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CustomTextInput = ({id , value , onChange , className , ...props}) => {
+const CustomTextInput = ({id = "custom-input", value , onChange , className , ...props}) => {
 
     
   return (

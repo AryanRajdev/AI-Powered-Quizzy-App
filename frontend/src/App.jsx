@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loading from "./componets/common/Loading";
 import TeacherTemplates from "./pages/teacher/templates";
 import CreateTemplatePage from "./pages/teacher/templates/create";
+import NotFoundPage from "./pages/404";
 
 
 const Home = lazy(() => import("./pages/index"));
@@ -18,11 +19,14 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element = {<Home />}></Route>
+
           <Route element = {<TeacherLayout />}>
           <Route path="/teacher/dashboard" element = {<TeacherDashboard />}></Route>
           <Route path="/teacher/templates" element = {<TeacherTemplates />}></Route>
           <Route path="/teacher/templates/create" element = {<CreateTemplatePage />}></Route>
           </Route>
+
+          <Route path="*" element = {<NotFoundPage />}></Route>
         </Routes>
       </Router>
     </Suspense>

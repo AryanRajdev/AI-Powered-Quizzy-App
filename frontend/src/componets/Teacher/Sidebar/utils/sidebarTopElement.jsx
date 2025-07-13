@@ -1,4 +1,4 @@
-import { LayoutDashboard, LayoutTemplate } from "lucide-react";
+import { icons, LayoutDashboard, LayoutTemplate,TestTubeDiagonal } from "lucide-react";
 
 export const sidebarTopElements = [
   {
@@ -11,4 +11,9 @@ export const sidebarTopElements = [
     to: "/teacher/templates",
     icon: <LayoutTemplate />,
   },
+  {
+    label : "Assesments",
+    to : "/teacher/assesments",
+    icon : <TestTubeDiagonal />,
+  }
 ];
