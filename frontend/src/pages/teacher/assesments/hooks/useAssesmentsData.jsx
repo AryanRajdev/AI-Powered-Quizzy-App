@@ -1,11 +1,10 @@
 import { EyeIcon } from "lucide-react";
 import { TrashIcon } from "lucide-react";
-import { EditIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-export const useTemplatesData = () => {
+export const useAssesmentsData = () => {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const rows = [
    
@@ -15,12 +14,6 @@ export const useTemplatesData = () => {
       icon: <EyeIcon size={20} className="text-green-500" />,
       onClick: (row) => {
         navigate(`/teacher/templates/${row._id}`);
-      },
-    },
-    {
-      icon: <EditIcon size={20} className="text-blue-500" />,
-      onClick: () => {
-        alert("Edit is coming soon!");
       },
     },
     {
