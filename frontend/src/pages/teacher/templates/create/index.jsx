@@ -5,13 +5,20 @@ import AddQuestionType from "../../../../componets/Teacher/Templates/create/AddQ
 import QuestionTypes from "../../../../componets/Teacher/Templates/QuestionTypes";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { resetTemplateState } from "../../../../store/features/template/templateSlice";
 
 const CreateTemplatePage = () => {
   const { setHeading, setSubheading } = useHeading();
-
+  const dispatch = useDispatch();
   setHeading("Template Page");
   setSubheading("Create assignment here");
-
+  
+   useEffect(() => {
+    return () => {
+      dispatch(resetTemplateState());
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import { useHeading } from "../../../../hooks";
 import CustomInput from "../../../../componets/common/inputs/CustomInput";
 import { InputTypes } from "../../../../componets/common/inputs/CustomInput/types";
@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { assesmentsSelector } from "../../../../store/features/assesments/selectors";
 import { setAssesmentKey } from "../../../../store/features/assesments/assesmentSlice";
+import { resetAssesmentsState } from "../../../../store/features/assesments/assesmentSlice";
 
 const CreateAssesmentPage = () => {
   
@@ -20,6 +21,13 @@ const CreateAssesmentPage = () => {
   function handleChange(key , value){
     dispatch(setAssesmentKey({key,value}));
   }
+
+   useEffect(() => {
+    return () => {
+      dispatch(resetAssesmentsState());
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div>

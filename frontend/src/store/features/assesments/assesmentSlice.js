@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { assesmentInitialState } from "./initialState";
 import * as Actions from "./actions";
+import { resetAssesmentsStateAction } from "./actions/resetAssesmentsStateAction";
 
 export * from "./selectors";
 
@@ -9,9 +10,10 @@ const assesmentSlice = createSlice({
   initialState: assesmentInitialState,
   reducers: {
     setAssesmentKey: Actions.setAssesmentKeyAction,
+    resetAssesmentsState : Actions.resetAssesmentsStateAction
   },
 });
 
-export const { setAssesmentKey } = assesmentSlice.actions;
+export const { setAssesmentKey,resetAssesmentsState } = assesmentSlice.actions;
 
 export default assesmentSlice.reducer;
