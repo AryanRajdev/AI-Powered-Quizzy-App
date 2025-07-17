@@ -1,14 +1,13 @@
-import React from 'react'
-import CustomInput from '../../../common/inputs/CustomInput';
-import { InputTypes } from '../../../common/inputs/CustomInput/types';
-import { questionOptions } from '../../../../utils';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import { templateSelector } from '../../../../store/features/template/selectors';
-import { updateQuestionTypeData } from '../../../../store/features/template/templateSlice';
-import { difficultyOptions } from '../../../../utils';
-import Options from './Options';
-
+import React, { useState } from "react";
+import CustomInput from "../../../common/inputs/CustomInput";
+import { InputTypes } from "../../../common/inputs/CustomInput/types";
+import { questionOptions } from "../../../../utils";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { templateSelector } from "../../../../store/features/template/selectors";
+import { updateQuestionTypeData } from "../../../../store/features/template/templateSlice";
+import { difficultyOptions } from "../../../../utils";
+import Options from "./Options";
 
 function QuestionType({ index }) {
   const dispatch = useDispatch();

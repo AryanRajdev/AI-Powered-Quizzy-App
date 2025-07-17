@@ -45,8 +45,9 @@ function CustomTable({ columns = [], data = [], actions = [] }) {
               {/* Actions */}
               {shouldShowActions && (
                 <td className="border p-1 text-sm flex items-center gap-2">
-                  {actions.map((action) => (
+                  {actions.map((action,index) => (
                     <div
+                      key={index}
                       className="cursor-pointer"
                       onClick={() => action.onClick(row)}
                     >

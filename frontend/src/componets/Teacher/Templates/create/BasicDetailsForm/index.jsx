@@ -14,6 +14,7 @@ function TemplatesBasicDetailsForm() {
     useSelector(templateSelector);
 
   const handleChange = (key, value) => {
+    console.log("val----", value);
     dispatch(setTemplateKey({ key, value }));
   };
 

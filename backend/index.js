@@ -3,10 +3,12 @@ import express , {json} from 'express'
 import { connect } from 'mongoose'
 import { templateRouter } from './routes/template.js';
 import { errorHandler } from "./utils/errorHandler.js";
+import cors from "cors"
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 connect("mongodb+srv://aryanraj24032002:vGHRdCIntHRTAFwM@cluster0.dadtef9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 .then(()=>{
